@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Heebo", sans-serif;
+    @apply bg-gray-100;
+  }
+}
+
+@layer components {
+  .diffFont {
+    font-family: "Nunito", sans-serif;
+  }
+  .menuBar {
+    @apply w-6 h-1 bg-slate-400 mb-1 rounded;
+  }
+}
