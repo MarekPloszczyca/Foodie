@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +16,10 @@
 @layer components {
   .diffFont {
     font-family: "Nunito", sans-serif;
+  }
+  .smallHeader {
+    font-family: "Pacifico", cursive;
+    @apply text-orange;
   }
   .menuBar {
     @apply w-6 h-1 bg-slate-400 mb-1 rounded;
