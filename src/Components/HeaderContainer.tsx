@@ -14,7 +14,7 @@ export default function HeaderContainer(props: { title: string }) {
       before:z-[-5] text-white"
     >
       <h1 className="diffFont text-4xl pb-2">{props.title}</h1>
-      <p className="">
+      <p>
         Embrace a culinary adventure at our restaurant, where every dish is a
         journey of flavors meticulously crafted to delight your palate. Join us
         in an ambiance of warmth and sophistication, where our attentive staff
