@@ -4,6 +4,7 @@ import Navigation from "../Components/Navigation";
 import FeaturesGrid from "../Components/FeaturesGrid";
 import About from "../Components/About";
 import MenuContainer from "../Components/MenuContainer";
+import ReservationContainer from "../Components/ReservationContainer";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <Navigation />
       <HeaderContainer title="Enjoy Our Delicious Meal" />
       <FeaturesGrid />
-      <About/>
-      <MenuContainer/>
+      <About />
+      <MenuContainer />
+      <ReservationContainer />
     </Fragment>
   );
 }

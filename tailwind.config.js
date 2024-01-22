@@ -19,6 +19,21 @@ export default {
       },
       animation: {
         "spin-slow": "spin 50s linear infinite",
+        button: "button 1500ms ease-out infinite",
+      },
+      keyframes: {
+        button: {
+          "0%": {
+            transform:
+              "translateX(-50%) translateY(-50%) translateZ(0) scale(1)",
+            opacity: "1",
+          },
+          "100%": {
+            transform:
+              "translateX(-50%) translateY(-50%) translateZ(0) scale(1.5)",
+            opacity: "0",
+          },
+        },
       },
     },
   },
