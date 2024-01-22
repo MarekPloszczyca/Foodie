@@ -4,7 +4,7 @@ interface Props {
   name: string;
   price: string;
   text: string;
-  type: string;
+  type?: string;
 }
 
 export default function SingleMeal(props: Props) {

@@ -5,11 +5,18 @@ interface Props {
   icon: IconProp;
   firstWord: string;
   secondWord: string;
+  type: string;
+  mealsHandler: React.Dispatch<{ type: string }>;
 }
 
 export default function MenuIcon(props: Props) {
   return (
-    <button className="flex mt-4 items-center p-2">
+    <button
+      onClick={() => {
+        props.mealsHandler({ type: props.type });
+      }}
+      className="flex mt-4 items-center p-2"
+    >
       <FontAwesomeIcon
         icon={props.icon}
         className="w-10 h-10 pr-4"
