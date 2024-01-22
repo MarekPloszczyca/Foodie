@@ -20,6 +20,7 @@ export default {
       animation: {
         "spin-slow": "spin 50s linear infinite",
         button: "button 1500ms ease-out infinite",
+        wrong: "wrong 0.5s linear"
       },
       keyframes: {
         button: {
@@ -32,6 +33,23 @@ export default {
             transform:
               "translateX(-50%) translateY(-50%) translateZ(0) scale(1.5)",
             opacity: "0",
+          },
+        },
+        wrong: {
+          "0%": {
+            left: "0",
+          },
+          "25%": {
+            left: "0.2rem",
+          },
+          "50%": {
+            left: "0",
+          },
+          "75%": {
+            left: "-0.2rem",
+          },
+          "100%": {
+            left: "0",
           },
         },
       },
