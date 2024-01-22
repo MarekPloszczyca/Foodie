@@ -6,6 +6,7 @@ import About from "../Components/About";
 import MenuContainer from "../Components/MenuContainer";
 import ReservationContainer from "../Components/ReservationContainer";
 import TeamMembers from "../Components/TeamMembers";
+import Footer from "../Components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <MenuContainer />
       <ReservationContainer />
       <TeamMembers/>
+      <Footer/>
     </Fragment>
   );
 }

@@ -2,7 +2,7 @@ import Logo from "../../assets/Logo.png";
 
 export default function Navigation() {
   return (
-    <div className="bg-darkBlue flex justify-between">
+    <nav className="bg-darkBlue flex justify-between">
       <div className="flex justify-center items-center ">
         <img src={Logo} className="w-16  p-4" />
         <p className="diffFont text-3xl text-orange">Foodie</p>
@@ -12,6 +12,6 @@ export default function Navigation() {
         <div className="menuBar"></div>
         <div className="menuBar mb-0"></div>
       </button>
-    </div>
+    </nav>
   );
 }
