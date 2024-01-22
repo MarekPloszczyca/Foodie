@@ -19,6 +19,7 @@ export default {
       },
       maxWidth: {
         tablet: "830px",
+        desktop: "1240px"
       },
       animation: {
         "spin-slow": "spin 50s linear infinite",

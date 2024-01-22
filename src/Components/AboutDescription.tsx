@@ -3,7 +3,7 @@ import SmallHeader from "./SmallHeader";
 export default function AboutDescription() {
   return (
     <div className="centered">
-      <div className="p-4 pt-12 max-w-tablet">
+      <div className="p-4 pt-12 max-w-tablet lg:pl-8 lg:p-1">
         <SmallHeader title="About Us" />
         <h3 className="diffFont text-4xl pt-4">Welcome to Foodie</h3>
         <p className="pt-8 text-gray-600">

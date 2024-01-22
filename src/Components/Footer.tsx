@@ -5,7 +5,7 @@ import Opening from "./Opening";
 
 export default function Footer() {
   return (
-    <footer className="bg-darkBlue p-4 pt-12 md:grid md:grid-cols-2 md:p-8 md:items-baseline">
+    <footer className="bg-darkBlue p-4 pt-12 md:grid md:grid-cols-2 md:p-8 md:items-baseline xl:grid-cols-4 ">
       <Company />
       <Contact />
       <Opening/>

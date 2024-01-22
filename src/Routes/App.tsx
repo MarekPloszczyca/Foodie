@@ -12,7 +12,7 @@ function App() {
   return (
     <Fragment>
       <Navigation />
-      <HeaderContainer title="Enjoy Our Delicious Meal" />
+      <HeaderContainer title="Enjoy Our Delicious Meals" />
       <FeaturesGrid />
       <About />
       <MenuContainer />

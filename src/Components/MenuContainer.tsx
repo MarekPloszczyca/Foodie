@@ -71,11 +71,11 @@ export default function MenuContainer() {
 
   return (
     <div className="centered ">
-      <div className="flex flex-col items-center pt-16 w-full max-w-tablet">
+      <div className="flex flex-col items-center pt-16 w-full max-w-tablet lg:max-w-desktop">
         <SmallHeader title="Food Menu" center />
         <h3 className="diffFont text-2xl pt-2">Most Popular Meals</h3>
         <MenuIcons mealsHandler={dispatch} />
-        {meals}
+        <div className="w-full lg:grid lg:grid-cols-2 lg:h-96">{meals}</div>
       </div>
     </div>
   );

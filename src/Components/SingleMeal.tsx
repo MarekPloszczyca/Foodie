@@ -9,7 +9,7 @@ interface Props {
 export default function SingleMeal(props: Props) {
   return (
     <div className="flex p-4 w-full items-center">
-      <img src={props.img} alt={props.name} className="w-24 " />
+      <img src={props.img} alt={props.name} className="w-24 lg:w-32" />
       <div className="pl-4 w-full">
         <p className="diffFont w-full text-xl flex justify-between border-b-2">
           {props.name} <span className="text-orange">{`$${props.price}`}</span>
