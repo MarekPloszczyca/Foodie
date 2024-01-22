@@ -34,13 +34,13 @@ export default function Newsletter() {
             }}
             className={`${
               wrong && "animate-wrong bg-red-100"
-            } relative p-4 mt-4 w-full max-w-[29.5rem] text-black`}
+            } relative outline-none border-2 rounded focus:border-blue-500 p-4 mt-4 w-full max-w-[29.5rem] text-black`}
           ></input>
           <button
             onClick={() => {
               submitHandler();
             }}
-            className="diffFont bg-orange rounded p-2 px-4 absolute right-2 top-6"
+            className="diffFont bg-orange rounded p-2 px-4 absolute right-2 top-[1.6rem]"
           >
             Sign Up
           </button>

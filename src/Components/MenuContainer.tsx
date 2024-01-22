@@ -70,11 +70,13 @@ export default function MenuContainer() {
   }, [type]);
 
   return (
-    <div className="flex flex-col items-center pt-16">
-      <SmallHeader title="Food Menu" center />
-      <h3 className="diffFont text-2xl pt-2">Most Popular Meals</h3>
-      <MenuIcons mealsHandler={dispatch} />
-      {meals}
+    <div className="centered ">
+      <div className="flex flex-col items-center pt-16 w-full max-w-tablet">
+        <SmallHeader title="Food Menu" center />
+        <h3 className="diffFont text-2xl pt-2">Most Popular Meals</h3>
+        <MenuIcons mealsHandler={dispatch} />
+        {meals}
+      </div>
     </div>
   );
 }

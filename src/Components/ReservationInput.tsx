@@ -7,7 +7,7 @@ interface Props {
   handleChange: any;
   error: string | undefined;
   onBlur: any;
-  touched: boolean | undefined;
+  touched: boolean |undefined;
 }
 
 export default function ReservationInput(props: Props) {

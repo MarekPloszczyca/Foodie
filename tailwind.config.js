@@ -17,10 +17,13 @@ export default {
       colors: {
         orange: "#FEA116",
       },
+      maxWidth: {
+        tablet: "830px",
+      },
       animation: {
         "spin-slow": "spin 50s linear infinite",
         button: "button 1500ms ease-out infinite",
-        wrong: "wrong 0.5s linear"
+        wrong: "wrong 0.5s linear",
       },
       keyframes: {
         button: {

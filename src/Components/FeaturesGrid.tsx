@@ -43,5 +43,9 @@ const items = features.map((item) => {
 });
 
 export default function FeaturesGrid() {
-  return <div className="pt-12">{items}</div>;
+  return (
+    
+      <div className="centered"><div className="pt-12 md:grid md:grid-cols-2 max-w-tablet">{items}</div></div>
+    
+  );
 }

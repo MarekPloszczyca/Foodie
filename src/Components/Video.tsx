@@ -8,8 +8,8 @@ export default function Video() {
   const [play, setPlay] = useState(false);
 
   return (
-    <div className="relative">
-      <video ref={media} muted>
+    <div className="relative md:bg-darkBlue">
+      <video ref={media} muted className="h-full md:ml-8 ">
         <source src={video} type="video/mp4" />
       </video>
       {!play && (

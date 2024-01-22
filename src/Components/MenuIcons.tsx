@@ -9,7 +9,7 @@ export default function MenuIcons(props: { mealsHandler: React.Dispatch<{ type: 
   return (
     <div
       className="max-[319px]:flex max-[319px]:flex-col max-[319px]:items-stretch
-    max-[319px]:flex-wrap max-[319px]:content-center p-4 pt-8 w-11/12 grid grid-cols-2 gap-2 justify-center items-center justify-items-center border-b-2 mb-8 md:flex md:justify-evenly"
+    max-[319px]:flex-wrap max-[319px]:content-center p-4 pt-8 w-11/12 grid grid-cols-2 gap-2 justify-center items-center justify-items-center border-b-2 mb-8 md:flex md:justify-evenly "
     >
       <MenuIcon
         icon={faMugHot}
