@@ -1,6 +1,7 @@
 import ReservationInput from "./ReservationInput";
 import SmallHeader from "./SmallHeader";
 import { useFormik } from "formik";
+import { useState } from "react";
 
 const validate = (values: {
   name: string;
@@ -30,6 +31,8 @@ const validate = (values: {
 };
 
 export default function ReservationForm() {
+  const [booked, setBooked] = useState(false);
+
   const form = useFormik({
     initialValues: {
       name: "",
@@ -37,17 +40,27 @@ export default function ReservationForm() {
       date: "",
       people: "",
     },
+    enableReinitialize: true,
     validate,
     onSubmit: () => {
-      console.log("submited");
+      if (!localStorage.getItem(`${form.values.name}`)) {
+        localStorage.setItem(
+          `${form.values.name}`,
+          JSON.stringify(form.values)
+        );
+        form.resetForm();
+      } else setBooked(true);
     },
   });
 
   return (
-    <div className="bg-darkBlue p-12">
-      <SmallHeader title="Reservation" />
-      <h3 className="diffFont text-white text-2xl pt-2">Book A Table Online</h3>
-      <form onSubmit={form.handleSubmit}>
+    <div className="bg-darkBlue p-12 relative ">
+      {!booked && <SmallHeader title="Reservation" /> && (
+        <h3 className="diffFont text-white text-2xl pt-2">
+          Book A Table Online
+        </h3>
+      )}
+      <form className={`${booked && "invisible"}`} onSubmit={form.handleSubmit}>
         <ReservationInput
           key="name"
           id="name"
@@ -98,7 +111,24 @@ export default function ReservationForm() {
         >
           BOOK NOW
         </button>
-      </form>
+      </form>{" "}
+      {booked && (
+        <div className="diffFont flex flex-col items-center  text-white bg-darkBlue absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-5 border-orange border-2 rounded">
+          <SmallHeader title="Information" />
+          <p className="py-4 text-xl ">
+            One of our tables is already booked by you. If you need any
+            informations contact us.
+          </p>
+          <button
+            className="bg-orange px-8 mt-4 w-1/2"
+            onClick={() => {
+              setBooked(false);
+            }}
+          >
+            &#10003;
+          </button>
+        </div>
+      )}
     </div>
   );
 }
