@@ -5,6 +5,7 @@ import FeaturesGrid from "../Components/FeaturesGrid";
 import About from "../Components/About";
 import MenuContainer from "../Components/MenuContainer";
 import ReservationContainer from "../Components/ReservationContainer";
+import TeamMembers from "../Components/TeamMembers";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <About />
       <MenuContainer />
       <ReservationContainer />
+      <TeamMembers/>
     </Fragment>
   );
 }
