@@ -47,7 +47,7 @@ export default function Newsletter() {
         </div>
       )}
       {submitted && (
-        <div className="diffFont text-2xl">Thanks for your support!</div>
+        <div className="diffFont text-2xl h-[75px] centered">Thanks for your support!</div>
       )}
     </div>
   );

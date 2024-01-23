@@ -55,11 +55,13 @@ export default function ReservationForm() {
 
   return (
     <div className="bg-darkBlue p-12 relative ">
-      {!booked && <SmallHeader title="Reservation" /> && (
+      <div className={`${booked && "invisible"}`}>
+        <SmallHeader title="Reservation" />
+
         <h3 className="diffFont text-white text-2xl pt-2">
           Book A Table Online
         </h3>
-      )}
+      </div>
       <form className={`${booked && "invisible"}`} onSubmit={form.handleSubmit}>
         <ReservationInput
           key="name"
@@ -107,20 +109,20 @@ export default function ReservationForm() {
         />
         <button
           type="submit"
-          className="diffFont text-white bg-orange w-full mt-4 py-4"
+          className="diffFont text-white bg-orange w-full mt-4 py-4 lg:hover:brightness-110 "
         >
           BOOK NOW
         </button>
       </form>{" "}
       {booked && (
-        <div className="diffFont flex flex-col items-center  text-white bg-darkBlue absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-5 border-orange border-2 rounded">
-          <SmallHeader title="Information" />
-          <p className="py-4 text-xl ">
+        <div className="diffFont flex flex-col items-center  text-white bg-darkBlue absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-4 border-orange border-2 rounded lg:h-80 lg:justify-center">
+          <SmallHeader title="Information" center />
+          <p className="py-4 text-xl text-center">
             One of our tables is already booked by you. If you need any
             informations contact us.
           </p>
           <button
-            className="bg-orange px-8 mt-4 w-1/2"
+            className="bg-orange px-8 mt-4 w-1/2 lg:hover:brightness-110 lg:hover:duration-500  lg:text-3xl "
             onClick={() => {
               setBooked(false);
             }}

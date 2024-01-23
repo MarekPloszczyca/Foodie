@@ -19,12 +19,13 @@ export default {
       },
       maxWidth: {
         tablet: "830px",
-        desktop: "1240px"
+        desktop: "1240px",
       },
       animation: {
         "spin-slow": "spin 50s linear infinite",
         button: "button 1500ms ease-out infinite",
         wrong: "wrong 0.5s linear",
+        fromLeft: "left 1500ms ease-in-out",
       },
       keyframes: {
         button: {
@@ -54,6 +55,14 @@ export default {
           },
           "100%": {
             left: "0",
+          },
+        },
+        left: {
+          "0%": {
+            transform: "translate3d(-150%,0,0)"
+          },
+          "100%": {
+            transform: "translateZ(0)"
           },
         },
       },

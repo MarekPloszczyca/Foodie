@@ -31,6 +31,7 @@ export default function MenuContainer() {
     lunch: false,
     dinner: false,
   });
+  const [change, setChange] = useState(false);
 
   useEffect(() => {
     let newArray: {
@@ -69,13 +70,32 @@ export default function MenuContainer() {
     setMeals(newMeals);
   }, [type]);
 
+  const test = (type: any) => {
+    setChange(true);
+    setTimeout(() => {
+      setChange(false);
+      dispatch(type);
+    }, 300);
+  };
+
   return (
     <div className="centered ">
       <div className="flex flex-col items-center pt-16 w-full max-w-tablet lg:max-w-desktop">
         <SmallHeader title="Food Menu" center />
         <h3 className="diffFont text-2xl pt-2">Most Popular Meals</h3>
-        <MenuIcons mealsHandler={dispatch} />
-        <div className="w-full lg:grid lg:grid-cols-2 lg:h-96">{meals}</div>
+        <MenuIcons
+          mealsHandler={test}
+          breakfast={type.breakfast}
+          dinner={type.dinner}
+          lunch={type.lunch}
+        />
+        <div
+          className={`${
+            change ? "opacity-0" : ""
+          } w-full opacity-1 lg:grid lg:grid-cols-2 lg:h-96 duration-300`}
+        >
+          {meals}
+        </div>
       </div>
     </div>
   );

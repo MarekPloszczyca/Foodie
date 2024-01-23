@@ -7,7 +7,7 @@ interface Props {
   handleChange: any;
   error: string | undefined;
   onBlur: any;
-  touched: boolean |undefined;
+  touched: boolean | undefined;
 }
 
 export default function ReservationInput(props: Props) {
@@ -22,7 +22,7 @@ export default function ReservationInput(props: Props) {
       value={props.value}
       className={`${
         props.touched && props.error ? "border-red-600 animate-wrong" : ""
-      } w-full relative mt-4 p-4 outline-none border-2 rounded focus:border-blue-500 `}
+      } w-full relative mt-4 p-4 outline-none border-2 rounded focus:border-blue-500 lg:hover:bg-gray-200 lg:hover:duration-300`}
     />
   );
 }

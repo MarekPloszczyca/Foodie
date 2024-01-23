@@ -21,7 +21,7 @@ export default function Video() {
             }, 18000);
             media.current !== null ? media.current.play() : null;
           }}
-          className="absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-orange  p-8 rounded-full before:contents-[''] before:absolute before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:bg-orange before:rounded-full before:animate-button"
+          className="absolute  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-orange  p-8 rounded-full before:contents-[''] before:absolute before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:bg-orange before:rounded-full before:animate-button lg:hover:brightness-110 duration-500"
         >
           <FontAwesomeIcon
             className="relative left-1 top-1"

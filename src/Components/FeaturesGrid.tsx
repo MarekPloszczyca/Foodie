@@ -6,7 +6,7 @@ import { HeadsetOutline } from "react-ionicons";
 
 const features = [
   {
-    icon: <PersonOutline color={"#FEA116"} width={"3rem"} height={"3rem"} />,
+    icon: <PersonOutline  color={"#FEA116"} width={"3rem"} height={"3rem"}  />,
     title: "Top Chefs",
     description:
       "Master chefs possess an unparalleled expertise in culinary arts, seamlessly blending creativity and precision to elevate gastronomic experiences to unparalleled heights.",

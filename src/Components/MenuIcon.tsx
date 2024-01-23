@@ -7,6 +7,7 @@ interface Props {
   secondWord: string;
   type: string;
   mealsHandler: React.Dispatch<{ type: string }>;
+  active: boolean;
 }
 
 export default function MenuIcon(props: Props) {
@@ -15,7 +16,9 @@ export default function MenuIcon(props: Props) {
       onClick={() => {
         props.mealsHandler({ type: props.type });
       }}
-      className="flex mt-4 items-center p-2"
+      className={`flex mt-4 items-center p-2 border-b-2  ${
+        props.active ? "border-orange" : "border-gray-100"
+      } lg:[&>p]:hover:scale-110 lg:[&_*]:duration-500 duration-500 hover:brightness-90`}
     >
       <FontAwesomeIcon
         icon={props.icon}

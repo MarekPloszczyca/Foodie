@@ -18,19 +18,19 @@ export default function AboutDescription() {
           succulent meats and seafood to vibrant vegetarian options, our chefs
           skillfully prepare each dish to tantalize your taste buds.
         </p>
-        <div className="flex items-center pt-2 mt-8 border-l-4 border-orange">
-          <div className="diffFont text-orange text-4xl pl-4 pr-8">10</div>
+        <div className="lg:flex lg:justify-between"><div className="flex items-center pt-2 mt-8 border-l-4 border-orange">
+          <div className="diffFont text-orange text-4xl pl-4 pr-8 lg:text-5xl">10</div>
           <div className="flex flex-col">
             Year of <span className="diffFont">EXPERIENCE</span>
           </div>
         </div>
         <div className="flex items-center pt-2 mt-8 border-l-4 border-orange">
-          <div className="diffFont text-orange text-4xl pl-4 pr-8">23</div>
+          <div className="diffFont text-orange text-4xl pl-4 pr-8 lg:text-5xl">23</div>
           <div className="flex flex-col">
             Popular <span className="diffFont">MASTER CHEFS</span>
           </div>
-        </div>
-        <button className="diffFont bg-orange text-white  p-4 pl-10 pr-10 mt-8">
+        </div></div>
+        <button className="diffFont bg-orange text-white  p-4 pl-10 pr-10 mt-8 lg:hover:brightness-110 duration-500">
           READ MORE
         </button>
       </div>
