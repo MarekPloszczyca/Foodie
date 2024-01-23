@@ -25,8 +25,12 @@ export default {
         "spin-slow": "spin 50s linear infinite",
         button: "button 1500ms ease-out infinite",
         wrong: "wrong 0.5s linear",
-        fromLeft: "left 1500ms ease-in-out",
+        fromLeft: "fromLeft 1500ms ease-in-out",
+        fromBottom: "fromBottom 1500ms ease-in-out forwards",
+        imgDisplay: "imgDisplay 1500ms ease-in-out forwards",
+        footerDisplay: "footerDisplay 1000ms ease-in forwards",
       },
+
       keyframes: {
         button: {
           "0%": {
@@ -57,13 +61,37 @@ export default {
             left: "0",
           },
         },
-        left: {
+        fromLeft: {
           "0%": {
-            transform: "translate3d(-150%,0,0)"
+            transform: "translate3d(-150%,0,0)",
           },
           "100%": {
-            transform: "translateZ(0)"
+            transform: "translateZ(0)",
           },
+        },
+        fromBottom: {
+          "0%": {
+            transform: "translate3d(0,20%,0)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateZ(0)",
+            opacity: "1",
+          },
+        },
+        imgDisplay: {
+          "0%": {
+            opacity: "0",
+            transform: "scale3d(.3,.3,.3)",
+          },
+
+          "100%": {
+            opacity: "1",
+          },
+        },
+        footerDisplay: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
       },
     },

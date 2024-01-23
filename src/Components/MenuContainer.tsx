@@ -3,7 +3,8 @@ import MenuIcons from "./MenuIcons";
 import SingleMeal from "./SingleMeal";
 import SmallHeader from "./SmallHeader";
 import Meals from "../Data/Meals";
-import { useEffect, useState, useReducer, ReactNode } from "react";
+import { useEffect, useState, useReducer, ReactNode, useRef } from "react";
+import useDisplay from "../Hooks/useDisplay";
 
 const mealTypeHandler = (state: any, action: { type: string }) => {
   switch (action.type) {
@@ -32,6 +33,10 @@ export default function MenuContainer() {
     dinner: false,
   });
   const [change, setChange] = useState(false);
+  const item = useRef<HTMLDivElement>(null);
+  const [display, setDisplay] = useState(false);
+
+  useDisplay(item, setDisplay);
 
   useEffect(() => {
     let newArray: {
@@ -70,7 +75,7 @@ export default function MenuContainer() {
     setMeals(newMeals);
   }, [type]);
 
-  const test = (type: any) => {
+  const mealsHandler = (type: any) => {
     setChange(true);
     setTimeout(() => {
       setChange(false);
@@ -80,21 +85,36 @@ export default function MenuContainer() {
 
   return (
     <div className="centered ">
-      <div className="flex flex-col items-center pt-16 w-full max-w-tablet lg:max-w-desktop">
-        <SmallHeader title="Food Menu" center />
-        <h3 className="diffFont text-2xl pt-2">Most Popular Meals</h3>
-        <MenuIcons
-          mealsHandler={test}
-          breakfast={type.breakfast}
-          dinner={type.dinner}
-          lunch={type.lunch}
-        />
+      <div
+        ref={item}
+        className="flex flex-col items-center pt-16 w-full max-w-tablet lg:max-w-desktop"
+      >
         <div
-          className={`${
-            change ? "opacity-0" : ""
-          } w-full opacity-1 lg:grid lg:grid-cols-2 lg:h-96 duration-300`}
+          className={`${display ? "animate-fromBottom" : ""} opacity-0`}
+          style={{ animationDelay: "500ms" }}
         >
-          {meals}
+          <SmallHeader title="Food Menu" center />
+          <h3 className="diffFont text-2xl pt-2">Most Popular Meals</h3>
+        </div>
+        <div
+          className={`w-full centered flex-col opacity-0 ${
+            display ? "animate-fromBottom" : ""
+          }`}
+          style={{ animationDelay: "500ms" }}
+        >
+          <MenuIcons
+            mealsHandler={mealsHandler}
+            breakfast={type.breakfast}
+            dinner={type.dinner}
+            lunch={type.lunch}
+          />
+          <div
+            className={`${
+              change ? "opacity-0" : ""
+            } w-full opacity-1 lg:grid lg:grid-cols-2 lg:h-96 duration-300`}
+          >
+            {meals}
+          </div>
         </div>
       </div>
     </div>
