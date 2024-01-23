@@ -3,6 +3,7 @@ import Logo from "../../assets/Logo.png";
 
 export default function Navigation() {
   const [menu, setMenu] = useState(false);
+
   const menuHandler = () => {
     menu ? setMenu(false) : setMenu(true);
   };
@@ -18,7 +19,7 @@ export default function Navigation() {
           <p className="diffFont text-3xl text-orange">Foodie</p>
         </div>
         <button
-          onClick={menuHandler}
+          onClick={() => {menuHandler()}}
           className="m-4 p-2 border border-gray-800 rounded"
         >
           <div className="menuBar"></div>
@@ -27,8 +28,8 @@ export default function Navigation() {
         </button>
       </nav>
       <ul
-        className={`diffFont text-white absolute z-30 bg-darkBlue w-full pl-4 top-[4.35rem]   [&>li]:pb-2 h-0  overflow-hidden ${
-          menu ? "animate-menu" : "animate-menuClose"
+        className={`diffFont text-white absolute z-30 bg-darkBlue w-full pl-4 top-[4.35rem]   [&>li]:pb-2 duration-500  overflow-hidden ${
+          menu ? "h-52" : "h-0"
         }`}
       >
         <li className="pt-2">HOME</li>
