@@ -29,6 +29,8 @@ export default {
         fromBottom: "fromBottom 1500ms ease-in-out forwards",
         imgDisplay: "imgDisplay 1500ms ease-in-out forwards",
         footerDisplay: "footerDisplay 1000ms ease-in forwards",
+        menu: "menu 500ms ease-in forwards",
+        menuClose: "menuClose 500ms ease-in forwards"
       },
 
       keyframes: {
@@ -92,6 +94,14 @@ export default {
         footerDisplay: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        menu: {
+          "0%": { height: "0" },
+          "100%": { height: "13rem" },
+        },
+        menuClose: {
+          "0%": { height: "13rem" },
+          "100%": { height: "0" },
         },
       },
     },
