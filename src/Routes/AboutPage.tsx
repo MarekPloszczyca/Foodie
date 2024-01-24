@@ -5,6 +5,7 @@ import About from "../Components/About";
 import FeaturesGrid from "../Components/FeaturesGrid";
 import Footer from "../Components/Footer";
 import AboutMeals from "../Components/AboutMeals";
+import ScrollToTop from "../Components/Functional/ScrollToTop";
 
 export default function AboutPage() {
   return (
@@ -15,6 +16,7 @@ export default function AboutPage() {
       <FeaturesGrid />
       <AboutMeals />
       <Footer />
+      <ScrollToTop/>
     </Fragment>
   );
 }

@@ -7,6 +7,7 @@ import MenuContainer from "../Components/MenuContainer";
 import ReservationContainer from "../Components/ReservationContainer";
 import TeamMembers from "../Components/TeamMembers";
 import Footer from "../Components/Footer";
+import ScrollToTop from "../Components/Functional/ScrollToTop";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <ReservationContainer />
       <TeamMembers />
       <Footer />
+      <ScrollToTop/>
     </Fragment>
   );
 }
