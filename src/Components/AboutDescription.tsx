@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import SmallHeader from "./SmallHeader";
 import useDisplay from "../Hooks/useDisplay";
+import { Link } from "react-router-dom";
 
 export default function AboutDescription(props: { more?: boolean }) {
   const [experiance, setExperiance] = useState(0);
@@ -74,9 +75,9 @@ export default function AboutDescription(props: { more?: boolean }) {
           </div>
         </div>
         {props.more && (
-          <button className="diffFont bg-orange text-white  p-4 pl-10 pr-10 mt-8 lg:hover:brightness-110 duration-500">
+          <Link to="/about"><button className="diffFont bg-orange text-white  p-4 pl-10 pr-10 mt-8 lg:hover:brightness-110 duration-500">
             READ MORE
-          </button>
+          </button></Link>
         )}
       </div>
     </div>

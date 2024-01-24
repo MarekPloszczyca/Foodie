@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Image from "../../assets/HomeImage.png";
 import PageHeaderBackground from "../Models/PageHeaderBackground";
 
@@ -14,9 +15,11 @@ export default function HeaderContainer() {
           us in an ambiance of warmth and sophistication, where our attentive
           staff awaits to elevate your dining experience.
         </p>
-        <button className="diffFont bg-orange p-2 mt-4 rounded lg:text-lg lg:hover:brightness-110 duration-500">
-          BOOK A TABLE
-        </button>
+        <Link to="/reservation">
+          <button className="diffFont bg-orange p-2 mt-4 rounded lg:text-lg lg:hover:brightness-110 duration-500">
+            BOOK A TABLE
+          </button>
+        </Link>
       </div>
       <img
         className="w-10/12 max-w-md animate-spin-slow relative top-12 lg:top-0"

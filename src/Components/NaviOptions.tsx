@@ -26,9 +26,9 @@ export default function NaviOptions(props: Props) {
       </Link>
       <li>CONTACT</li>
       {props.desktop && (
-        <button className="bg-orange rounded p-2 ml-2 hover:brightness-110 duration-500">
+        <Link to="/reservation"><button className="bg-orange rounded p-2 ml-2 hover:brightness-110 duration-500">
           BOOK A TABLE
-        </button>
+        </button></Link>
       )}
     </ul>
   );
