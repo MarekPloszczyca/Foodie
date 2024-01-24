@@ -6,6 +6,7 @@ import MenuPage from "./Routes/Menu.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReservationPage from "./Routes/ReservationPage.tsx";
+import Team from "./Routes/Team.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
   },
   { path: "/menu", element: <MenuPage /> },
   { path: "/reservation", element: <ReservationPage /> },
+  { path: "/team", element: <Team /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

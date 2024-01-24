@@ -5,7 +5,7 @@ interface Props {
   img: string;
   name: string;
   type: string;
-  delay?:number;
+  delay?: number;
 }
 
 export default function SingleMember(props: Props) {
@@ -17,7 +17,7 @@ export default function SingleMember(props: Props) {
   return (
     <div
       ref={item}
-      className={`bg-white p-6 flex flex-col items-center mt-12 md:mt-0 lg:[&>img]:hover:scale-110 [&>img]:duration-500 opacity-0 ${
+      className={` text-center bg-white p-6 flex flex-col items-center mt-12 md:mt-0 lg:[&>img]:hover:scale-110 [&>img]:duration-500 opacity-0 ${
         display ? "animate-fromBottom" : ""
       }`}
       style={{ animationDelay: `${props.delay}ms` }}
