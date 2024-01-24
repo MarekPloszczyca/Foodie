@@ -12,13 +12,13 @@ function App() {
   return (
     <Fragment>
       <Navigation />
-      <HeaderContainer title="Enjoy Our Delicious Meals" />
+      <HeaderContainer />
       <FeaturesGrid />
-      <About />
+      <About more/>
       <MenuContainer />
       <ReservationContainer />
-      <TeamMembers/>
-      <Footer/>
+      <TeamMembers />
+      <Footer />
     </Fragment>
   );
 }

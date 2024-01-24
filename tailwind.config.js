@@ -27,8 +27,9 @@ export default {
         wrong: "wrong 0.5s linear",
         fromLeft: "fromLeft 1500ms ease-in-out",
         fromBottom: "fromBottom 1500ms ease-in-out forwards",
+        fromTop: "fromTop 500ms ease-in forwards",
         imgDisplay: "imgDisplay 1500ms ease-in-out forwards",
-        footerDisplay: "footerDisplay 1000ms ease-in forwards",
+        footerDisplay: "footerDisplay 1000ms ease-in-out forwards",
       },
 
       keyframes: {
@@ -79,6 +80,14 @@ export default {
             opacity: "1",
           },
         },
+        fromTop: {
+          "0%": {
+            transform: "translate3d(0,-150%,0)",
+          },
+          "100%": {
+            transform: "translateZ(0)",
+          },
+        },
         imgDisplay: {
           "0%": {
             opacity: "0",
@@ -93,7 +102,6 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-    
       },
     },
   },

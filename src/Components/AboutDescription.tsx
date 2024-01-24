@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import SmallHeader from "./SmallHeader";
 import useDisplay from "../Hooks/useDisplay";
 
-export default function AboutDescription() {
+export default function AboutDescription(props: { more?: boolean }) {
   const [experiance, setExperiance] = useState(0);
   const [chefs, setChefs] = useState(0);
   const item = useRef<HTMLDivElement>(null);
@@ -55,12 +55,12 @@ export default function AboutDescription() {
           succulent meats and seafood to vibrant vegetarian options, our chefs
           skillfully prepare each dish to tantalize your taste buds.
         </p>
-        <div  className="lg:flex lg:justify-between">
+        <div className="lg:flex lg:justify-between">
           <div className="flex items-center pt-2 mt-8 border-l-4 border-orange">
             <div className="diffFont text-orange text-4xl pl-4 pr-8 lg:text-5xl w-20 lg:w-24">
               {experiance}
             </div>
-            <div  className="flex flex-col">
+            <div className="flex flex-col">
               Year of <span className="diffFont">EXPERIENCE</span>
             </div>
           </div>
@@ -73,9 +73,11 @@ export default function AboutDescription() {
             </div>
           </div>
         </div>
-        <button className="diffFont bg-orange text-white  p-4 pl-10 pr-10 mt-8 lg:hover:brightness-110 duration-500">
-          READ MORE
-        </button>
+        {props.more && (
+          <button className="diffFont bg-orange text-white  p-4 pl-10 pr-10 mt-8 lg:hover:brightness-110 duration-500">
+            READ MORE
+          </button>
+        )}
       </div>
     </div>
   );

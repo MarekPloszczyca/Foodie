@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface Props {
   ulStyle: string;
   firstItem?: string;
@@ -7,8 +9,12 @@ interface Props {
 export default function NaviOptions(props: Props) {
   return (
     <ul className={props.ulStyle}>
-      <li className={props.firstItem}>HOME</li>
-      <li>ABOUT</li>
+      <Link to="/">
+        <li className={props.firstItem}>HOME</li>
+      </Link>
+      <Link to="/about">
+        <li>ABOUT</li>
+      </Link>
       <li>MENU</li>
       <li>RESERVATION</li>
       <li>OUR TEAM</li>
