@@ -1,5 +1,5 @@
 import MealsDescription from "./MealDescription";
-import SmallHeader from "./SmallHeader";
+
 import Pasta from "../../assets/Meals/Pasta.jpg";
 import Meat from "../../assets/Meals/Beef.jpg";
 import Fish from "../../assets/Meals/Salmon.jpg";
@@ -24,33 +24,29 @@ export default function AboutMeals() {
           good company, and the joy of savoring life's delicious moments.
         </p>
         <div className="md:flex ">
-          <div className="flex justify-stretch items-center flex-col">
-            <SmallHeader title="Pasta" center />
-            <MealsDescription
-              image={Pasta}
-              text="Immerse yourself in a world of pasta perfection as we bring the finest
+          <MealsDescription
+            title="Pasta"
+            image={Pasta}
+            text="Immerse yourself in a world of pasta perfection as we bring the finest
           Italian tradition to your plate. Our pasta dishes are a symphony of
           flavors, where al dente textures meet luscious sauces, creating an
           unforgettable culinary experience. Elevate your pasta experience with
           our artisanal creations, where handcrafted noodles meet innovative
           sauces for a delightful fusion of tradition and creativity. "
-            />
-          </div>
-          <div className="flex justify-stretch items-center flex-col ">
-            <SmallHeader title="Meat" center />
-            <MealsDescription
-              image={Meat}
-              text="
-Savor the succulence of our carefully selected meats, expertly prepared to perfection. From the melt-in-your-mouth tenderness of our slow-cooked braised short ribs to the bold and robust flavors of our perfectly grilled steaks, our commitment to quality shines through in every savory bite. Whether you're a carnivore connoisseur seeking the boldness of a prime ribeye or a fan of slow-cooked delicacies like our tender lamb shanks."
-            />
-          </div>
-          <div className="flex justify-stretch items-center flex-col ">
-            <SmallHeader title="Fish" center />
-            <MealsDescription
-              image={Fish}
-              text="Dive into a sea of exquisite flavors with our thoughtfully crafted fish dishes, where freshness meets culinary finesse. Our seafood selection is a testament to the ocean's bounty, showcasing a symphony of tastes from delicate fillets to robust catches. Indulge in the buttery perfection of our pan-seared sea bass or relish the zesty notes of our citrus-infused grilled salmon, each dish a testament to our dedication to capturing the essence of the sea. "
-            />
-          </div>
+          />
+
+          <MealsDescription
+            title="Meat"
+            image={Meat}
+            text="
+                Savor the succulence of our carefully selected meats, expertly prepared to perfection. From the melt-in-your-mouth tenderness of our slow-cooked braised short ribs to the bold and robust flavors of our perfectly grilled steaks, our commitment to quality shines through in every savory bite. Whether you're a carnivore connoisseur seeking the boldness of a prime ribeye or a fan of slow-cooked delicacies like our tender lamb shanks."
+          />
+
+          <MealsDescription
+            title="Fish"
+            image={Fish}
+            text="Dive into a sea of exquisite flavors with our thoughtfully crafted fish dishes, where freshness meets culinary finesse. Our seafood selection is a testament to the ocean's bounty, showcasing a symphony of tastes from delicate fillets to robust catches. Indulge in the buttery perfection of our pan-seared sea bass or relish the zesty notes of our citrus-infused grilled salmon, each dish a testament to our dedication to capturing the essence of the sea. "
+          />
         </div>
       </div>
     </div>
