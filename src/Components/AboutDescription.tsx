@@ -39,7 +39,7 @@ export default function AboutDescription(props: { more?: boolean }) {
   }, [chefs, display]);
 
   return (
-    <div ref={item} className="centered">
+    <div ref={item} className="centered lg:pr-4">
       <div className="p-4 pt-12 max-w-tablet lg:pl-8 lg:p-1">
         <SmallHeader title="About Us" />
         <h3 className="diffFont text-4xl pt-4">Welcome to Foodie</h3>
@@ -55,9 +55,9 @@ export default function AboutDescription(props: { more?: boolean }) {
           succulent meats and seafood to vibrant vegetarian options, our chefs
           skillfully prepare each dish to tantalize your taste buds.
         </p>
-        <div className="lg:flex lg:justify-between">
+        <div className="lg:flex  lg:justify-between">
           <div className="flex items-center pt-2 mt-8 border-l-4 border-orange">
-            <div className="diffFont text-orange text-4xl pl-4 pr-8 lg:text-5xl w-20 lg:w-24">
+            <div className="diffFont text-orange text-4xl pl-4 pr-8 lg:text-5xl w-20 lg:w-24 ">
               {experiance}
             </div>
             <div className="flex flex-col">
@@ -65,7 +65,7 @@ export default function AboutDescription(props: { more?: boolean }) {
             </div>
           </div>
           <div className="flex items-center pt-2 mt-8 border-l-4 border-orange">
-            <div className="diffFont text-orange text-4xl pl-4 pr-8 lg:text-5xl w-20 lg:w-24">
+            <div className="diffFont text-orange text-4xl pl-4 pr-8 lg:text-5xl w-20 lg:w-24 ">
               {chefs}
             </div>
             <div className="flex flex-col">

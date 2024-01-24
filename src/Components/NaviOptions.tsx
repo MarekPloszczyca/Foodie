@@ -15,8 +15,12 @@ export default function NaviOptions(props: Props) {
       <Link to="/about">
         <li>ABOUT</li>
       </Link>
-      <li>MENU</li>
-      <li>RESERVATION</li>
+      <Link to="/menu">
+        <li>MENU</li>
+      </Link>
+      <Link to="/reservation">
+        <li>RESERVATION</li>
+      </Link>
       <li>OUR TEAM</li>
       <li>CONTACT</li>
       {props.desktop && (

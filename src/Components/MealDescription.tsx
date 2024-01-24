@@ -16,7 +16,7 @@ export default function MealsDescription(props: Props) {
 
   return (
     <div
-      className={`centered flex-col pt-4 md:px-2 md:[&>h6]:text-2xl ${
+      className={`centered flex-col pt-4 opacity-0   md:px-2 md:[&>h6]:text-2xl ${
         display ? `animate-fromBottom ` : ""
       }`}
       ref={item}
@@ -31,7 +31,7 @@ export default function MealsDescription(props: Props) {
       before:bg-gradient-to-r
       before:bg-gray-600   
       before:opacity-75
-      before:z-[-5] text-white my-4`}
+      before:z-[-5] text-white my-4 hover:before:opacity-0 hover:[&>p]:opacity-0 before:duration-500`}
         style={{ backgroundImage: `url(${props.image})` }}
       >
         <p className="diffFont py-8">{props.text}</p>

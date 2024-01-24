@@ -1,28 +1,41 @@
 import MealsDescription from "./MealDescription";
-
 import Pasta from "../../assets/Meals/Pasta.jpg";
 import Meat from "../../assets/Meals/Beef.jpg";
 import Fish from "../../assets/Meals/Salmon.jpg";
+import { useRef, useState } from "react";
+import useDisplay from "../Hooks/useDisplay";
 
 export default function AboutMeals() {
+  const item = useRef<HTMLDivElement>(null);
+  const [display, setDisplay] = useState(false);
+
+  useDisplay(item, setDisplay);
+
   return (
     <div className="centered">
       <div className="flex flex-col items-center [&_p]:px-4 [&_h3]:px-4 [&_h6]:px-4 py-8  [&_p]:pt-8 md:max-w-tablet lg:max-w-desktop">
-        <h3 className="diffFont text-4xl">Many Delicious Meals</h3>
-        <p className="text-gray-600">
-          Indulge your senses in a culinary journey like no other at our
-          exquisite dining establishment. Our menu is a symphony of flavors
-          meticulously crafted to tantalize your taste buds and leave you
-          craving for more. From the first bite to the last, each dish is a
-          celebration of freshness, quality ingredients, and culinary expertise.
-        </p>
-        <p className="pb-4 text-gray-600">
-          As you dine in our welcoming ambiance, the attention to detail in
-          every aspect of your experience will not go unnoticed. Our commitment
-          to providing an unforgettable dining experience extends beyond the
-          plate, ensuring that your time with us is a celebration of good food,
-          good company, and the joy of savoring life's delicious moments.
-        </p>
+        <div
+          ref={item}
+          className={`${display ? "animate-fromBottom" : ""} opacity-0`}
+        >
+          <h3 className="diffFont text-4xl">Many Delicious Meals</h3>
+          <p className="text-gray-600">
+            Indulge your senses in a culinary journey like no other at our
+            exquisite dining establishment. Our menu is a symphony of flavors
+            meticulously crafted to tantalize your taste buds and leave you
+            craving for more. From the first bite to the last, each dish is a
+            celebration of freshness, quality ingredients, and culinary
+            expertise.
+          </p>
+          <p className="pb-4 text-gray-600">
+            As you dine in our welcoming ambiance, the attention to detail in
+            every aspect of your experience will not go unnoticed. Our
+            commitment to providing an unforgettable dining experience extends
+            beyond the plate, ensuring that your time with us is a celebration
+            of good food, good company, and the joy of savoring life's delicious
+            moments.
+          </p>
+        </div>
         <div className="md:flex ">
           <MealsDescription
             title="Pasta"

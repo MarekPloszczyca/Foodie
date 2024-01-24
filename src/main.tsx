@@ -2,8 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./Routes/App.tsx";
 import About from "./Routes/AboutPage.tsx";
+import MenuPage from "./Routes/Menu.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReservationPage from "./Routes/ReservationPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +16,8 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
   },
+  { path: "/menu", element: <MenuPage /> },
+  { path: "/reservation", element: <ReservationPage /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
