@@ -25,7 +25,9 @@ export default function TeamMembers(props: { additional?: boolean }) {
         } centered flex-col opacity-0`}
       >
         <SmallHeader title="Team Members" center />
-        <h3 className="diffFont text-2xl pt-2">Our Master Chefs</h3>
+        <h3 className="diffFont text-2xl pt-2">
+          {props.additional ? "Our Team" : "Our Master Chefs"}
+        </h3>
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-8 md:pt-16 md:max-w-tablet md:pb-16 lg:grid-cols-4 lg:max-w-desktop">
         <SingleMember img={MemberOne} name="Allan Daníel" type="Chef" />

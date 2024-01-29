@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Logo from "../../assets/Logo.png";
 import NaviOptions from "./NaviOptions";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   const [menu, setMenu] = useState(false);
@@ -27,10 +28,12 @@ export default function Navigation() {
         className={`bg-darkBlue flex justify-between relative 
       `}
       >
-        <div className="flex justify-center items-center ">
-          <img src={Logo} className="w-16  p-4" />
-          <p className="diffFont text-3xl text-orange">Foodie</p>
-        </div>
+        <Link to="/">
+          <div className="flex justify-center items-center ">
+            <img src={Logo} className="w-16  p-4" />
+            <p className="diffFont text-3xl text-orange">Foodie</p>
+          </div>
+        </Link>
         <button
           onClick={() => {
             menuHandler();
@@ -48,7 +51,7 @@ export default function Navigation() {
       </nav>
       <NaviOptions
         ulStyle={`diffFont text-white absolute z-30 bg-darkBlue w-full pl-4 top-[4.35rem]   [&_li]:pb-2 duration-500  overflow-hidden lg:hidden ${
-          menu ? "h-52" : "h-0"
+          menu ? "h-44" : "h-0"
         }`}
         firstItem="pt-2"
       />

@@ -24,7 +24,6 @@ export default function NaviOptions(props: Props) {
       <Link to="/team">
         <li>OUR TEAM</li>
       </Link>
-      <li>CONTACT</li>
       {props.desktop && (
         <Link to="/reservation"><button className="bg-orange rounded p-2 ml-2 hover:brightness-110 duration-500">
           BOOK A TABLE
