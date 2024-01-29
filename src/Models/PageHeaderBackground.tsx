@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Background from "../../assets/Background.jpg";
 
 export default function PageHeaderBackground(props: { children: ReactNode }) {
   return (
@@ -12,7 +13,7 @@ export default function PageHeaderBackground(props: { children: ReactNode }) {
     before:bg-darkBlue
     before:opacity-75
     before:z-[-5] text-white lg:flex-row lg:justify-between  lg:py-40 lg:text-start"
-      style={{ backgroundImage: `url(../../assets/Background.jpg)` }}
+      style={{ backgroundImage: `url(${Background})` }}
     >
       {props.children}
     </div>
